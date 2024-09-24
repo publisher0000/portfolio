@@ -568,7 +568,7 @@ h2 {font-size: 4.5417vw;}
 header{max-width: 100vw;width: 100%;padding: 2.1667vw 2.6667vw;border-bottom: 0.2083vw solid var(--maincolor);}
 header .container {align-items: center;}
 header .container .img_box {width: 33.8333vw;height: 10.625vw;/* text-align: left; *//* margin: auto; */}
-
+header .container .img_box img{width: auto!important; height: 100%;}
 header .container .gnb {display: none;align-items: center;gap: 6.6667vw;}
 header .container .gnb li a {font-size: 3.7500vw;   transition: 0.5s ease;}
 header .container .gnb li a::after{   top: 0; left: 110%; background-image: url(./images/arrow.png);  width: 5.8333vw; height: 100%; transition: 0.5s ease;}
