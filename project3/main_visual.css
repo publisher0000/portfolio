@@ -1,0 +1,214 @@
+.visual-sec {
+    overflow: hidden
+}
+
+.visual-sec .txt-col-wrap {
+    padding-top: 125px
+}
+
+@media screen and (min-width: 992px) {
+    .visual-sec .txt-col-wrap {
+        position: absolute !important;
+        left: 60px;
+        z-index: 1;
+        padding-top: 0
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .visual-sec .txt-col-wrap {
+        left: calc((100% - 1480px) / 2)
+    }
+}
+
+.visual-sec .txt-col-wrap .sub-title {
+    line-height: 1.7;
+    color: #666;
+    transform: translateY(80%);
+    opacity: 0
+}
+
+@media screen and (min-width: 768px) {
+    .visual-sec .txt-col-wrap .sub-title {
+        font-size: 22px
+    }
+}
+
+.visual-sec .txt-col-wrap .title-wrap {
+    overflow: hidden;
+    margin: 15px 0 30px
+}
+
+@media screen and (min-width: 768px) {
+    .visual-sec .txt-col-wrap .title-wrap {
+        margin: 2.08507vw 0 5.00417vw
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .visual-sec .txt-col-wrap .title-wrap {
+        margin: 25px 0 60px
+    }
+}
+
+.visual-sec .txt-col-wrap .title {
+    font-family: "NANUMSQUARE-700", sans-serif;
+    font-size: 32px;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(50%)
+}
+
+@media screen and (min-width: 992px) {
+    .visual-sec .txt-col-wrap .title {
+        font-size: 3.62727vw
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .visual-sec .txt-col-wrap .title {
+        font-size: 58px
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .visual-sec .img-col-wrap {
+        height: 100vh;
+        padding-top: 117px;
+        padding-right: 20px;
+        max-width: 935px !important;
+        transform: translateX(30px);
+        opacity: 0
+    }
+}
+
+.visual-sec .img-col-wrap .img-wrap {
+    position: relative;
+    width: calc(100% + 20px)
+}
+
+@media screen and (min-width: 768px) {
+    .visual-sec .img-col-wrap .img-wrap {
+        width: calc(100% + 60px)
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .visual-sec .img-col-wrap .img-wrap {
+        width: 100%
+    }
+}
+
+.visual-sec .img-col-wrap .img-wrap .img {
+    width: 100%
+}
+
+.visual-sec .img-col-wrap .img-wrap .img-bg {
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    width: calc(100% - 20px);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.6s cubic-bezier(0.12, 0.4, 0.41, 0.86)
+}
+
+@media screen and (min-width: 768px) {
+    .visual-sec .img-col-wrap .img-wrap .img-bg {
+        right: 0;
+        bottom: 0
+    }
+}
+
+.visual-sec .img-col-wrap .img-wrap.aniOn .img-bg {
+    right: -2.5px !important;
+    opacity: 1
+}
+
+@media screen and (min-width: 768px) {
+    .visual-sec .img-col-wrap .img-wrap.aniOn .img-bg {
+        width: 100%;
+        top: -8px !important;
+        right: -8px !important
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .visual-sec .img-col-wrap .img-wrap.aniOn .img-bg {
+        right: -20px !important
+    }
+}
+
+.visual-sec .visual-wrap {
+    position: relative;
+    width: 100%
+}
+
+@media screen and (min-width: 992px) {
+    .visual-sec .visual-wrap {
+        height: 100%
+    }
+}
+
+.visual-sec .visual-wrap .img {
+    width: calc(276/375*100vw);
+    object-fit: contain;
+    right: 0 !important;
+    left: unset !important
+}
+
+@media screen and (min-width: 992px) {
+    .visual-sec .visual-wrap .img {
+        height: calc(738/913*100vh);
+        padding: 0;
+        max-width: 100%
+    }
+}
+
+.visual-sec .visual-wrap .text {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    opacity: 0
+}
+
+.visual-sec .text {
+    height: 100%
+}
+
+.visual-sec .btn-scrolldown {
+    position: absolute;
+    right: -102px !important;
+    bottom: 41px;
+    right: 27px;
+    width: 12.50782vw;
+    height: 12.50782vw;
+    border-radius: 50%;
+    background-image: url(/views/res/imgs/main/icon_arrow_down.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 73px;
+    background-color: #1A2960;
+    transition: .4s;
+    z-index: 1
+}
+
+@media screen and (min-width: 992px) {
+    .visual-sec .btn-scrolldown {
+        right: 0px !important;
+        bottom: 2.5641vw
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .visual-sec .btn-scrolldown {
+        right: -102px !important;
+        bottom: 41px;
+        width: 200px;
+        height: 200px
+    }
+}
+
+.visual-sec .btn-primary-st1 {
+    opacity: 0
+}

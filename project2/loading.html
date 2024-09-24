@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>와이드크릭</title>
+    <link rel="stylesheet" href="./font.css">
+    <style>
+        body {position: relative; margin: 0px; padding: 0px; font-family: Outfit, sans-serif; height: 200vh; background-color: black;}
+        body:after{position: absolute; content: ""; top: 0; left: 0; background-color: #fff; width: 100%; height: 100%; z-index: -9; animation: start 2.5s ease;}
+        @keyframes start {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+        ul, li { list-style: none; padding: 0px; margin: 0px; }
+        a { text-decoration: none; color: rgb(51, 51, 51); }
+        .mo_only {display: none;}
+        .mo_only2 {display: none;}
+        .pc_only {display: block;}
+
+        .circle {
+            position: absolute;
+            width:70px;
+            height: 70px;
+            top: 50%;
+            left: 50%;
+            margin: -50px 0 0 -50px;
+            background: #CB4B16;
+            border-radius: 80%;
+            backface-visibility: hidden;
+        }
+
+        .img_box img { width: 100%; height: 100%; object-fit: cover; }
+        header { width: 100%;}
+        header .container { z-index: 99; max-width: 1920px; width: 100%; box-sizing: border-box; padding: 20px 80px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+        header .img_box { width: 200px; }
+        header .wrap { display: flex; align-items: center; gap: 40px; }
+        header .menu { z-index: 99; display: flex; align-items: center; gap: 20px; cursor: pointer;}
+        header .menu .menu_bar { width: 20px; height: 16px; position: relative;}
+        header .menu .menu_bar span { transition: 0.3s ease-in-out; position: absolute; top: 0px; display: inline-block; width: 100%; height: 2px; background-color: black; }
+        header .menu .menu_bar span:nth-child(1){top: 0;}
+        header .menu .menu_bar span:nth-child(2){top: 50%;}
+        header .menu .menu_bar span:nth-child(3){top: 100%;}
+
+        header .menu .menu_bar.on span:nth-child(1){rotate: 45deg; top: 50%;}
+        header .menu .menu_bar.on span:nth-child(2){opacity: 0;}
+        header .menu .menu_bar.on span:nth-child(3){rotate: -45deg; top: 50%;}
+        .scrollLock{overflow: hidden; }
+        .top_gnb {position: fixed; width: 100%; height: 100%; background-color: #fff; z-index: 99; display: none;}
+        .top_gnb .nav_scroll {display: flex; align-items: center; justify-content: center;}
+        .nav_scroll ul {padding-top: 50px;}
+        .nav_scroll ul li{font-size: 60px; padding: 15px;}
+        .nav_scroll ul li a{transition: 0.5s ease-in-out;}
+        .nav_scroll ul li a:hover {font-weight: 700; color: #CB4B16;}
+
+        .text_box { text-align: center; }
+        .text_box h2 { font-size: 160px; font-weight: 900; margin: 0px 0px 40px; opacity: 0;
+            transition: opacity 0.5s ease; /* 부드러운 전환 효과 */}
+        .container{
+        text-align: center;
+        overflow: hidden;
+    }
+
+.box:nth-child(2n-1){
+	background-color: rgba(0,0,0,0.05);
+}
+
+.box{
+	display: inline-block;
+	height: 200px;
+	width: 100%;
+	/* float:left; */
+	position: relative;
+	left: 50%;
+	/*margin:0 -4px -5px -2px;*/
+	transition: all .2s ease;
+	transform: translateX(-50%);
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1400px){
+	header { width: 100%;}
+    header .container {  max-width: 137.1429vw; width: 100%;  padding: 1.4286vw 5.7143vw;  flex-direction: row; align-items: center; }
+    header .img_box { width: 14.2857vw; }
+    header .wrap {  align-items: center; gap: 2.8571vw; }
+    header .menu {   align-items: center; gap: 1.4286vw; cursor: pointer;}
+    header .menu .menu_bar { width: 1.4286vw; height: 1.1429vw; }
+    header .menu .menu_bar span { transition: 0.3s ease-in-out;  top: 0.0000vw;  width: 100%; height: 0.1429vw;  }
+    header .menu .menu_bar span:nth-child(1){top: 0;}
+    header .menu .menu_bar span:nth-child(2){top: 50%;}
+    header .menu .menu_bar span:nth-child(3){top: 100%;}
+
+    header .menu .menu_bar.on span:nth-child(1){rotate: 45deg; top: 50%;}
+    header .menu .menu_bar.on span:nth-child(2){opacity: 0;}
+    header .menu .menu_bar.on span:nth-child(3){rotate: -45deg; top: 50%;}
+    .scrollLock{ }
+    .top_gnb { width: 100%; height: 100%;   }
+    .top_gnb .nav_scroll { align-items: center;}
+    .nav_scroll ul {padding-top: 3.5714vw;}
+    .nav_scroll ul li{font-size: 4.2857vw; padding: 1.0714vw;}
+    .nav_scroll ul li a{transition: 0.5s ease-in-out;}
+    .nav_scroll ul li a:hover { }
+    .text_box {  }
+    .text_box h2 { font-size: 11.4286vw;  margin: 0.0000vw 0.0000vw 2.8571vw; }
+
+}
+
+@media (max-width: 960px){
+	header { width: 100%;}
+header .container {  max-width: 100.0000vw; width: 100%;  padding: 2.0833vw 8.3333vw;  flex-direction: row;  align-items: center; }
+header .img_box { width: 20.8333vw; }
+header .wrap {  align-items: center; gap: 4.1667vw; }
+header .menu {   align-items: center; gap: 2.0833vw; cursor: pointer;}
+header .menu .menu_bar { width: 2.0833vw; height: 1.6667vw; }
+header .menu .menu_bar span { transition: 0.3s ease-in-out;  top: 0.0000vw;  width: 100%; height: 0.2083vw;  }
+header .menu .menu_bar span:nth-child(1){top: 0;}
+header .menu .menu_bar span:nth-child(2){top: 50%;}
+header .menu .menu_bar span:nth-child(3){top: 100%;}
+
+header .menu .menu_bar.on span:nth-child(1){rotate: 45deg; top: 50%;}
+header .menu .menu_bar.on span:nth-child(2){opacity: 0;}
+header .menu .menu_bar.on span:nth-child(3){rotate: -45deg; top: 50%;}
+.scrollLock{ }
+.top_gnb { width: 100%; height: 100%;   }
+.top_gnb .nav_scroll { align-items: center; }
+.nav_scroll ul {padding-top: 5.2083vw;}
+.nav_scroll ul li{font-size: 6.2500vw; padding: 1.5625vw;}
+.nav_scroll ul li a{transition: 0.5s ease-in-out;}
+.nav_scroll ul li a:hover { }
+
+.text_box {  }
+.text_box h2 {font-size: 12.6667vw;margin: 0.0000vw 0.0000vw 4.1667vw;}
+
+}
+
+@media (max-width:480px){
+    header { width: 100%;}
+    header .container {max-width: 100.0000vw;width: 100%;padding: 4.1667vw 6.6667vw;flex-direction: row;align-items: center;}
+    header .img_box { width: 41.6667vw; }
+    header .wrap {  align-items: center; gap: 8.3333vw; }
+    header .menu {   align-items: center; gap: 4.1667vw; cursor: pointer;}
+    header .menu .menu_bar { width: 4.1667vw; height: 3.3333vw; }
+    header .menu .menu_bar span { transition: 0.3s ease-in-out;  top: 0.0000vw;  width: 100%; height: 0.4167vw;  }
+    header .menu .menu_bar span:nth-child(1){top: 0;}
+    header .menu .menu_bar span:nth-child(2){top: 50%;}
+    header .menu .menu_bar span:nth-child(3){top: 100%;}
+
+    header .menu .menu_bar.on span:nth-child(1){rotate: 45deg; top: 50%;}
+    header .menu .menu_bar.on span:nth-child(2){opacity: 0;}
+    header .menu .menu_bar.on span:nth-child(3){rotate: -45deg; top: 50%;}
+    .scrollLock{ }
+    .top_gnb { width: 100%; height: 100%;   }
+    .top_gnb .nav_scroll { align-items: center;}
+    .nav_scroll ul {padding-top: 10.4167vw;}
+    .nav_scroll ul li{font-size: 8.5vw;padding: 2.125vw;}
+    .nav_scroll ul li a{transition: 0.5s ease-in-out;}
+    .nav_scroll ul li a:hover { }
+
+    .text_box {  }
+    .text_box h2 {font-size: 11.3333vw;margin: 19vw 0.0000vw 8.3333vw;}
+
+}
+        .loader4{
+            position: relative;
+            width: 360px;
+            height: 60px;
+            top: 45%;
+            top: -webkit-calc(50% - 10px);
+            top: calc(50% - 10px);
+            left: 25%;
+            left: -webkit-calc(50% - 75px);
+            left: 50%;
+            background-color: rgb(139 139 139 / 20%);
+            transform: translateX(-50%);
+        }
+
+        .loader4:before{
+            content: "";
+            position: absolute;
+            background-color: #8b8b8b;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 0px;
+            z-index: 0;
+            opacity: 1;
+            -webkit-transform-origin:  100% 0%;
+            transform-origin:  100% 0%;
+            -webkit-animation: loader4 10s ease-in-out infinite;
+            animation: loader4 10s ease-in-out infinite;
+        }
+
+        @-webkit-keyframes loader4{
+            0%{width: 0px;}
+            70%{width: 100%; opacity: 1;}
+            90%{opacity: 0; width: 100%;}
+            100%{opacity: 0;width: 0px;}
+        }
+
+        @keyframes loader4{
+            0%{width: 0px;}
+            70%{width: 100%; opacity: 1;}
+            90%{opacity: 0; width: 100%;}
+            100%{opacity: 0;width: 0px;}
+        }
+
+        .deco .img_box {display: none;}
+    </style>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="img_box">
+                <img src="./image/logo.svg" alt="">
+            </div>
+            <div class="wrap">
+                <ul class="language">
+                    <li>KO</li>
+                </ul>
+                <div class="menu">
+                    <p>MENU</p>
+                    <div class="menu_bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="top_gnb">
+            <div class="nav_scroll">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Our Businesses</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Our People</a></li>
+                    <li><a href="">ESG</a></li>
+                    <li><a href="">Notice</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="text_box">
+            <h2 id="loadingText">We Create</h2>
+        </div>
+        <div class="box">
+			<div class="loader4"></div>
+		</div>
+        <div class="deco">
+            <div class="img_box">
+                <img src="./image/main_visual1_new.jpg" alt="">
+            </div>
+            <div class="img_box">
+                <img src="./image/main_visual1_new_m.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <script>
+        const loadingText = document.getElementById('loadingText');
+        const texts = ["We Challenge", "We Create", "With Client", "WIDE CREEK"];
+        let index = 0;
+
+        // 텍스트 변경 함수
+        function changeText() {
+            loadingText.style.opacity = 0; // 텍스트를 서서히 사라지게 함
+
+            setTimeout(() => {
+                loadingText.innerText = texts[index]; // 텍스트 변경
+                loadingText.style.opacity = 1; // 텍스트를 서서히 보이게 함
+                index = (index + 1) % texts.length; // 인덱스 증가
+            }, 200); // 사라지는 시간과 동일하게 설정
+        }
+
+        // 처음에는 텍스트 보이게
+        setTimeout(() => {
+            loadingText.style.opacity = 1;
+        }, 500);
+
+        // 1초마다 텍스트 변경
+        setInterval(changeText, 1000); // 전체 주기를 1초로 설정
+
+        // 4초 후에 메인 페이지로 이동
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 4000);
+    </script>
+</body>
+<!-- Code injected by Five-server -->
+  <script async data-id="five-server" data-file="c:\Users\ggamj\Desktop\포트폴리오re\project2\loading.html" type="application/javascript" src="/fiveserver.js"></script>
+  </html>
