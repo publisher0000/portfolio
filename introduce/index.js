@@ -141,7 +141,13 @@ $(document).ready(function() {
             $('body').css("overflow", "auto");
             click = 0;
         }
-        
+       
+    })
+    $('.mo_container li a').click(function(){
+        $('.mo_container').css({"opacity": "0", "visibility": "hidden", "transform": "translateX(500px)"});
+            $('header .container .mo_gnb li').css("background-color","#db4a2b");
+            $('body').css("overflow", "auto");
+            click = 0;
     })
     $('.overlay').click(function() {
         $('.mo_container').css({"opacity": "0", "visibility": "hidden", "transform": "translateX(500px)"});
