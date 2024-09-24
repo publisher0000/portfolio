@@ -122,7 +122,7 @@ $(document).ready(function() {
     $(window).on('scroll', function() {
         var footerPosition = $('.history').offset().top;
         var scrollTop = $(this).scrollTop();
-        if (scrollTop >= footerPosition -100) {
+        if (scrollTop >= footerPosition -200) {
             $('#name_line path').addClass('animate');
         }
     });
