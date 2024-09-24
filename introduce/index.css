@@ -642,13 +642,12 @@ header .container .mo_gnb li.on:nth-child(3){top: 50%; transform: rotate(-45deg)
 .goal h3{font-size: 3.75vw;line-height: 6vw;padding-top: 0;}
 
 .name {
-    padding: 9vw 0;
+    padding: 2vw 0 8vw;
     height: auto;
 }
 
 #name_line path{
     stroke: var(--maincolor); /* 색상 설정 */
-
     fill: none;
     stroke-width: 2;
 }
