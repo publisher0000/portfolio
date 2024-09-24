@@ -2556,7 +2556,7 @@ flex-direction: column;
         
 width: 100%;
         
-height: 70vw;
+height: 62vw;
         
 overflow: hidden;
     }
@@ -2608,6 +2608,7 @@ flex-direction: column;
         font-family: Montserrat, sans-serif;
         font-size: 5.8333vw;
         margin-bottom: 0.3333vw;
+        margin-top: 0;
         color: rgb(255, 255, 255);
     }
     
@@ -2734,7 +2735,7 @@ flex-direction: column;
         height: 100%;
     }
     
-    .news_wrap {height: auto;flex-direction: column;padding-left: 0;width: 100%;}
+    .news_wrap {height: auto;flex-direction: column;padding-left: 0;padding: 2vw 0;width: 100%;}
     
     .news_wrap li {
         padding-bottom: 10.4167vw;
