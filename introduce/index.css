@@ -643,6 +643,7 @@ header .container .mo_gnb li.on:nth-child(3){top: 50%; transform: rotate(-45deg)
 
 .name {
     padding: 9vw 0;
+    height: auto;
 }
 
 #name_line path{
