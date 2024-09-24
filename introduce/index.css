@@ -479,7 +479,7 @@ footer ul li a{color: #fff;}
     .history {margin-top: 14.6484vw;margin-bottom: 14vw;width: 100%;height: auto;}
     .history .pc_history {display: none;}
     .history .mo_history {display: flex;gap: 9%;height: auto;/* padding: 9.7656vw 0; */flex-wrap: wrap;flex-direction: row;align-items: center;justify-content: center;align-content: flex-start;}
-    .history .mo_history li {position: relative;/* transform: translate(-50%, -50%); */display: flex;width: 29vw;height: 29vw;background-color: var(--maincolor);border-radius: 50%;flex-direction: column;align-items: center;align-content: center;justify-content: center;text-align: center;}
+    .history .mo_history li {position: relative;/* transform: translate(-50%, -50%); */display: flex;width: 30vw;height: 30vw;background-color: var(--maincolor);border-radius: 50%;flex-direction: column;align-items: center;align-content: center;justify-content: center;text-align: center;}
     .history .mo_history li span {font-size: 2.438vw;}
     .history .mo_history li .list {font-size: 2.4063vw;font-weight: 500;}
     .history .mo_history li:nth-child(1), .history .mo_history li:nth-child(4){background-color: transparent;border: var(--maincolor) solid 1px;background-color: #fff;margin-bottom: 2vw; }
@@ -620,10 +620,10 @@ header .container .mo_gnb li.on:nth-child(3){top: 50%; transform: rotate(-45deg)
 .portfolio p {margin: 10.4167vw 0 6.2500vw;font-size: 3.175vw;}
 .portfolio .portfolio_container { flex-direction: column; gap: 1.0417vw; width: 100%;}
 .portfolio .portfolio_container li{gap: 3.3333vw;}
-.portfolio .portfolio_container li a {width: 40%;}
+.portfolio .portfolio_container li a {width: 50%;}
 .portfolio .portfolio_container li a img{transition: 0.5s ease;}
 .portfolio .portfolio_container li a:hover img{transform: scale(1.1);}
-.portfolio .portfolio_container li .content{width: 60%;display: flex;flex-direction: column-reverse;align-items: self-start;justify-content: space-around;border-top: 0.2083vw solid #ddd;padding-top: 0;}
+.portfolio .portfolio_container li .content{width: 50%;display: flex;flex-direction: column-reverse;align-items: self-start;justify-content: space-around;border-top: 0.2083vw solid #ddd;padding-top: 0;}
 .portfolio .portfolio_container li .content li {font-size: 3.7500vw; }
 .portfolio .portfolio_container li .content li:nth-child(3) {font-size: 3.1500vw; color: #777;}
 .history {margin-top: 13.25vw;width: 100%;height: auto;}
@@ -642,7 +642,7 @@ header .container .mo_gnb li.on:nth-child(3){top: 50%; transform: rotate(-45deg)
 .goal h3{font-size: 3.75vw;line-height: 6vw;padding-top: 0;}
 
 .name {
-    padding: 5vw 0;
+    padding: 9vw 0;
 }
 
 #name_line path{
