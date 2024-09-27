@@ -65,6 +65,7 @@ header .mo_container{display: none;}
 .portfolio .portfolio_container li .content{width: 70%; display: flex; flex-direction: row; justify-content: space-between; align-items: self-start; border-top: 1px solid #ddd; padding-top: 20px; box-sizing: border-box;}
 .portfolio .portfolio_container li .content li {font-size: 18px; font-weight: 500;}
 
+
 .history {margin-top: 150px; width: 100%; height: 100vh; box-sizing: border-box; overflow: hidden;}
 .history .mo_history {display: none;}
 .history .pc_history {position: relative; height: 100%; padding: 100px 0;}

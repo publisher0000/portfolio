@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>변준현 portfolio</title>
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./index.css">
+    
      <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
@@ -97,42 +102,44 @@
         </section>
         <section id= "portfolio" class=" portfolio padding">
             <h2>PORTFOLIO</h2>
-            <p>* 학원수료 후 개인작업으로 다시 만들었습니다.</p>
             <ul class="portfolio_container">
                 <li>
-                    <a href="../project1/portfolio.html">
+                    <a href="../project1/portfolio.html" target="_blank">
                         <div class="img_box">
-                            <img src="./images/project1.png" alt="롯데건설 이미지">
+                            <img src="./images/lotte.jpg" alt="롯데건설 이미지">
                         </div>
                     </a>
                     <ul class="content">
                         <li>롯데건설 홈페이지</li>
                         <li>반응형 WEB / 리뉴얼</li>
                         <li>24.09.11 ~ 24.09.13</li>
+                        <li>개인작업(100%)</li>
                     </ul>
                 </li>
                 <li>
-                    <a href="../project2/loading.html">
+                    <a href="../project2/loading.html" target="_blank">
                         <div class="img_box">
-                            <img src="./images/project2.png" alt="와이드크릭 이미지">
+                            <img src="./images/widecreek.jpg" alt="와이드크릭 이미지">
                         </div>
                     </a>
                     <ul class="content">
                         <li>와이드크릭 홈페이지</li>
                         <li>반응형 WEB</li>
                         <li>24.09.14 ~ 24.09.16, 18</li>
+                        <li>개인작업(100%)</li>
                     </ul>
                 </li>
                 <li>
-                    <a href="../project3/index.html">
+                    <a href="../project3/index.html" target="_blank">
                         <div class="img_box">
-                            <img src="./images/project3.png" alt="한솔데코 이미지">
+                            <img src="./images/hansoldeco.jpg" alt="한솔데코 이미지">
                         </div>
                     </a>
                     <ul class="content">
                         <li>한솔데코 홈페이지</li>
                         <li>1920px 화면 작업</li>
                         <li>24.09.19 ~ 24.09.23</li>
+                        <li>개인작업(100%)</li>
                     </ul>
                 </li>
                 <li>
@@ -145,10 +152,53 @@
                         <li>포트폴리오소개 페이지</li>
                         <li>반응형 WEB</li>
                         <li>24.09.21 ~ 24.09.24</li>
+                        <li>개인작업(100%)</li>
                     </ul>
                 </li>
+                <li>
+                    <a href="../project/kfc/index.html" target="_blank">
+                        <div class="img_box">
+                            <img src="./images/kfc.jpg" alt="kfc 홈페이지">
+                        </div>
+                    </a>
+                    <ul class="content">
+                        <li>KFC 홈페이지</li>
+                        <li>반응형 WEB / 리뉴얼</li>
+                        <li>작업기간 8일</li>
+                        <li>개인작업(100%)</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../project/kgmobility/index.html" target="_blank">
+                        <div class="img_box">
+                            <img src="./images/kgmobility.jpg" alt="KG모빌리티 홈페이지">
+                        </div>
+                    </a>
+                    <ul class="content">
+                        <li>KG모빌리티 홈페이지</li>
+                        <li>반응형 WEB / 리뉴얼</li>
+                        <li>작업기간 7일</li>
+                        <li>개인작업(100%)</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../project/suwonfc/index2.html" target="_blank">
+                        <div class="img_box">
+                            <img src="./images/suwonfc.jpg" alt="수원fc 홈페이지">
+                        </div>
+                    </a>
+                    <ul class="content">
+                        <li>수원FC 홈페이지</li>
+                        <li>반응형 WEB / 리뉴얼</li>
+                        <li>작업기간 7일</li>
+                        <li>개인작업(100%)</li>
+                    </ul>
+                </li>
+
             </ul>
+            
         </section>
+     
         <section id="history" class=" history padding">
             <h2>HISTORY</h2>
             <ul class="pc_history">
@@ -187,7 +237,6 @@
                     <div class="list">이젠아카데미<br> 퍼블리셔 과정 수료</div>
                 </li>
             </ul>
-            
         </section>
         
         <section class=" goal">
@@ -215,6 +264,13 @@
             <li><a href="https://github.com/publisher0000/portfolio">GITHUB</a></li>
         </ul>
     </footer>
-    
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
 </body>
 </html>
